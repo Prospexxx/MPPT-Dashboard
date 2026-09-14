@@ -17,7 +17,7 @@
 
 ## 📌 Executive Summary
 
-Under **Partial Shading Conditions (PSC)**, photovoltaic (PV) arrays exhibit non-linear power-voltage ($P-V$) characteristics with multiple local power peaks alongside one Global Maximum Power Point (GMPP). Conventional algorithms like Perturb & Observe ($P\&O$) become trapped in local maxima, causing severe power losses (up to 70%) and erratic stalling in solar-powered DC submersible pumps.
+Under **Partial Shading Conditions (PSC)**, photovoltaic (PV) arrays exhibit non-linear power-voltage (P-V) characteristics with multiple local power peaks alongside one Global Maximum Power Point (GMPP). Conventional algorithms like Perturb & Observe (P&O) become trapped in local maxima, causing severe power losses (up to 70%) and erratic stalling in solar-powered DC submersible pumps.
 
 This project delivers a complete hardware-firmware-software solution:
 1. **Power Electronics:** A custom 50 kHz **Modified Ćuk DC-DC Converter** designed on a 2-layer PCB (EAGLE) with continuous input/output currents and isolated sensing (AMC1100, ACS712, FOD3182 gate drivers).
