@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustaqim Nurul Huda, S.Tr.T. — Engineering Portfolio & Resume</title>
+    <meta name="description" content="Technical Portfolio of Mustaqim Nurul Huda, S.Tr.T. — Industrial Electrical Engineering graduate from PENS specializing in Power Electronics, Embedded Systems, and Industrial Automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #07090e;
+            --bg-surface: #0d111a;
+            --bg-card: #131926;
+            --bg-card-hover: #1b2336;
+            --border: #1e293b;
+            --border-hover: #334155;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            --accent-glow: rgba(56, 189, 248, 0.18);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.15);
+            --amber: #f59e0b;
+            --rose: #f43f5e;
+            --indigo: #6366f1;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --text-muted: #64748b;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 40px -10px var(--accent-glow);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── UTILITIES & TYPOGRAPHY ── */
+        a { color: inherit; text-decoration: none; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ── NAVBAR ── */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        nav {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+        }
+        .nav-brand {
+            display: flex; align-items: center; gap: .75rem;
+            font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em;
+        }
+        .nav-brand .initials {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: var(--accent-gradient);
+            display: flex; align-items: center; justify-content: center;
+            color: #07090e; font-weight: 800; font-size: 1rem;
+        }
+        .nav-brand-text span {
+            display: block; font-size: .75rem; font-weight: 500;
+            color: var(--text-muted); line-height: 1.1;
+        }
+        .nav-links {
+            display: flex; gap: 2rem; list-style: none; align-items: center;
+        }
+        .nav-links li a {
+            color: var(--text-sub); font-size: .9rem; font-weight: 500;
+            transition: color .2s ease;
+        }
+        .nav-links li a:hover { color: var(--accent); }
+        .nav-cta-group {
+            display: flex; align-items: center; gap: .8rem;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: #38bdf8; color: #07090e;
+            padding: .6rem 1.25rem; border-radius: 999px;
+            font-size: .88rem; font-weight: 700;
+            transition: all .25s ease; border: 1px solid #38bdf8;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            background: #7dd3fc;
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: var(--bg-card); color: var(--text-main);
+            padding: .6rem 1.25rem; border-radius: 999px;
+            font-size: .88rem; font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all .2s ease;
+        }
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            padding: 9rem 0 5rem;
+            position: relative;
+            background:
+                radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.12), transparent 45%),
+                radial-gradient(circle at 80% 40%, rgba(99, 102, 241, 0.08), transparent 40%);
+        }
+        .hero-badge-row {
+            display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+        }
+        .badge-pill {
+            display: inline-flex; align-items: center; gap: .4rem;
+            padding: .35rem .9rem; border-radius: 999px;
+            font-size: .78rem; font-weight: 600;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+        .badge-pill.success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--emerald); border-color: rgba(16, 185, 129, 0.25);
+        }
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight: 800; line-height: 1.12;
+            letter-spacing: -0.03em; margin-bottom: 1.25rem;
+        }
+        .hero p.lead {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-sub); max-width: 820px;
+            margin-bottom: 2rem; font-weight: 400;
+        }
+        .hero-contact-row {
+            display: flex; flex-wrap: wrap; gap: 1.5rem;
+            color: var(--text-sub); font-size: .9rem;
+            margin-bottom: 2.5rem;
+        }
+        .hero-contact-row a, .hero-contact-row span {
+            display: inline-flex; align-items: center; gap: .4rem;
+            transition: color .2s ease;
+        }
+        .hero-contact-row a:hover { color: var(--accent); }
+
+        /* ── METRIC STAT COUNTERS ── */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem; margin-top: 3.5rem;
+        }
+        .metric-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.4rem; position: relative;
+            overflow: hidden;
+            transition: all .25s ease;
+        }
+        .metric-box:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+        }
+        .metric-val {
+            font-size: 2.2rem; font-weight: 800;
+            line-height: 1; letter-spacing: -0.02em;
+            margin-bottom: .35rem;
+        }
+        .metric-title {
+            color: var(--text-main); font-size: .88rem; font-weight: 600;
+        }
+        .metric-sub {
+            color: var(--text-muted); font-size: .75rem; margin-top: .2rem;
+        }
+
+        /* ── SECTION COMMONS ── */
+        section { padding: 5.5rem 0; }
+        .section-header { margin-bottom: 3.5rem; }
+        .section-tag {
+            color: var(--accent); font-size: .8rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .12em;
+            margin-bottom: .5rem; display: block;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800; letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            color: var(--text-sub); font-size: 1.05rem;
+            max-width: 700px; margin-top: .75rem;
+        }
+
+        /* ── ABOUT / PROFILE SUMMARY ── */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 3rem; align-items: center;
+        }
+        .profile-text p {
+            color: var(--text-sub); font-size: 1.02rem; margin-bottom: 1.2rem;
+        }
+        .profile-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+        }
+        .profile-card-item {
+            display: flex; gap: 1rem; margin-bottom: 1.5rem;
+        }
+        .profile-card-item:last-child { margin-bottom: 0; }
+        .profile-card-icon {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: rgba(56, 189, 248, 0.1); color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.25rem; flex-shrink: 0;
+        }
+        .profile-card-title {
+            font-size: .95rem; font-weight: 700; margin-bottom: .2rem;
+        }
+        .profile-card-desc {
+            color: var(--text-sub); font-size: .85rem; line-height: 1.5;
+        }
+
+        /* ── FEATURED CASE STUDIES ── */
+        .project-card-full {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem; margin-bottom: 3.5rem;
+            position: relative; overflow: hidden;
+            transition: border-color .3s ease;
+        }
+        .project-card-full:hover {
+            border-color: var(--accent);
+        }
+        .project-top-row {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; flex-wrap: wrap; gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-title {
+            font-size: 1.7rem; font-weight: 800; letter-spacing: -0.01em;
+        }
+        .project-meta-pills {
+            display: flex; gap: .5rem; flex-wrap: wrap;
+        }
+        .project-meta-pill {
+            background: var(--bg-card); border: 1px solid var(--border);
+            padding: .25rem .75rem; border-radius: 999px;
+            font-size: .78rem; font-weight: 600; color: var(--text-sub);
+        }
+
+        /* ── PROJECT 1 TABS ── */
+        .tab-nav {
+            display: flex; gap: .5rem; flex-wrap: wrap;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem; margin-bottom: 2rem;
+        }
+        .tab-btn {
+            background: var(--bg-card); color: var(--text-sub);
+            border: 1px solid var(--border); padding: .55rem 1.2rem;
+            border-radius: var(--radius-sm); font-size: .88rem;
+            font-weight: 600; cursor: pointer; transition: all .2s ease;
+        }
+        .tab-btn:hover { color: var(--text-main); background: var(--bg-card-hover); }
+        .tab-btn.active {
+            background: #38bdf8; color: #07090e;
+            border-color: #38bdf8; font-weight: 700;
+        }
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; animation: fadeIn .3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .showcase-grid-2col {
+            display: grid; grid-template-columns: 1.1fr 1fr;
+            gap: 2rem; align-items: center;
+        }
+        .showcase-img-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden; border: 1px solid var(--border);
+            background: #000; position: relative;
+        }
+        .showcase-img-card img {
+            width: 100%; height: auto; display: block;
+        }
+        .showcase-img-caption {
+            padding: .8rem 1rem; font-size: .8rem;
+            color: var(--text-muted); background: var(--bg-card);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── RESULTS COMPARISON TABLE ── */
+        .table-responsive {
+            overflow-x: auto; border-radius: var(--radius-md);
+            border: 1px solid var(--border); margin-top: 1.5rem;
+        }
+        table.spec-table {
+            width: 100%; border-collapse: collapse;
+            font-size: .88rem; text-align: left;
+        }
+        table.spec-table th, table.spec-table td {
+            padding: .9rem 1.2rem; border-bottom: 1px solid var(--border);
+        }
+        table.spec-table th {
+            background: var(--bg-card); color: var(--text-sub);
+            font-size: .78rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+        table.spec-table tbody tr:last-child td { border-bottom: none; }
+        table.spec-table tbody tr:hover { background: var(--bg-card-hover); }
+        table.spec-table .winner {
+            color: var(--emerald); font-weight: 700;
+        }
+
+        /* ── PROJECT 2 & 3 CARDS ── */
+        .projects-secondary-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .project-card-half {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem; display: flex; flex-direction: column;
+            justify-content: space-between;
+            transition: all .25s ease;
+        }
+        .project-card-half:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        /* ── TECHNICAL SKILL MATRIX ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-group-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem; transition: all .2s ease;
+        }
+        .skill-group-card:hover {
+            border-color: var(--accent);
+            background: var(--bg-card);
+        }
+        .skill-group-header {
+            display: flex; align-items: center; gap: .8rem;
+            margin-bottom: 1.25rem;
+        }
+        .skill-group-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+        }
+        .skill-group-title { font-size: 1.05rem; font-weight: 700; }
+        .skill-pill-cloud {
+            display: flex; flex-wrap: wrap; gap: .5rem;
+        }
+        .skill-pill {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            color: var(--text-sub);
+            padding: .35rem .75rem; border-radius: 999px;
+            font-size: .8rem; font-weight: 500;
+            transition: all .2s ease;
+        }
+        .skill-pill:hover {
+            color: var(--accent); border-color: var(--accent);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        /* ── CREDENTIALS & PATENTS ── */
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .credential-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .cred-badge {
+            display: inline-block; padding: .2rem .6rem;
+            border-radius: 6px; font-size: .72rem; font-weight: 700;
+            text-transform: uppercase; margin-bottom: .75rem;
+        }
+        .cred-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; }
+        .cred-org { color: var(--text-muted); font-size: .82rem; margin-bottom: .75rem; }
+        .cred-desc { color: var(--text-sub); font-size: .88rem; }
+
+        /* ── TIMELINE ── */
+        .timeline {
+            position: relative; padding-left: 2rem;
+            border-left: 2px solid var(--border);
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 2.5rem;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot {
+            position: absolute; left: -2.45rem; top: .25rem;
+            width: 14px; height: 14px; border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg-base);
+        }
+        .timeline-date {
+            color: var(--accent); font-size: .8rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .08em;
+            margin-bottom: .25rem;
+        }
+        .timeline-role {
+            font-size: 1.15rem; font-weight: 700; color: var(--text-main);
+        }
+        .timeline-company {
+            color: var(--text-sub); font-size: .95rem; margin-bottom: .6rem;
+        }
+        .timeline-desc {
+            color: var(--text-muted); font-size: .88rem; line-height: 1.6;
+        }
+
+        /* ── CODE VIEWER ── */
+        .code-box {
+            background: #080b11;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.4rem; overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .82rem; line-height: 1.65;
+            color: #94a3b8;
+        }
+        .code-box pre { margin: 0; }
+        .kw { color: #f43f5e; }
+        .fn { color: #38bdf8; }
+        .num { color: #f59e0b; }
+        .str { color: #10b981; }
+        .comm { color: #475569; font-style: italic; }
+
+        /* ── DOWNLOAD & CONTACT BANNER ── */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(99, 102, 241, 0.1));
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 24px; padding: 4rem 3rem;
+            text-align: center; margin: 4rem 0;
+            box-shadow: var(--shadow-glow);
+        }
+        .cta-banner h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800; margin-bottom: 1rem;
+        }
+        .cta-banner p {
+            color: var(--text-sub); font-size: 1.1rem;
+            max-width: 650px; margin: 0 auto 2.5rem;
+        }
+        .cta-buttons {
+            display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 0; color: var(--text-muted);
+            font-size: .88rem; text-align: center;
+        }
+        footer a { color: var(--accent); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .profile-grid, .showcase-grid-2col, .projects-secondary-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero { padding-top: 7rem; }
+            .cta-banner { padding: 3rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════════════ -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="nav-brand">
+                    <div class="initials">MH</div>
+                    <div class="nav-brand-text">
+                        Mustaqim N. Huda
+                        <span>S.Tr.T. · Industrial Electrical Eng.</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mppt-project">MPPT System</a></li>
+                    <li><a href="#other-projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#patents">Credentials</a></li>
+                </ul>
+                <div class="nav-cta-group">
+                    <a href="assets/Resume_Mustaqim_Nurul_Huda.pdf" target="_blank" class="btn-primary">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+                        Download CV
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-badge-row">
+                <div class="badge-pill">
+                    <span>🎓</span> B.A.Sc. Industrial Electrical Engineering · PENS (2026)
+                </div>
+                <div class="badge-pill success">
+                    <span>⭐</span> GPA: 3.48 / 4.00
+                </div>
+                <div class="badge-pill">
+                    <span>📜</span> Registered Patent & Copyright Holder
+                </div>
+            </div>
+
+            <h1>
+                Mustaqim Nurul Huda, <span class="gradient-text">S.Tr.T.</span><br>
+                Power Electronics & Embedded Control
+            </h1>
+
+            <p class="lead">
+                Industrial Electrical Engineering graduate from <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong>.
+                Specialized in hardware-firmware co-design, modified Ćuk/SEPIC converters, intelligent MPPT metaheuristics
+                (WODE/WOA/DE), and high-voltage electrical utility diagnostics adhering to K3/OHS & LOTO protocols.
+            </p>
+
+            <div class="hero-contact-row">
+                <a href="mailto:mustaqimnurulhuda14@gmail.com">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    mustaqimnurulhuda14@gmail.com
+                </a>
+                <a href="https://wa.me/6285172263476" target="_blank">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    +62 851-7226-3476
+                </a>
+                <a href="https://linkedin.com/in/huda14" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    linkedin.com/in/huda14
+                </a>
+                <a href="https://github.com/Prospexxx" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    github.com/Prospexxx
+                </a>
+                <span>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Surabaya, Indonesia
+                </span>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="metrics-bar">
+                <div class="metric-box">
+                    <div class="metric-val gradient-text">98.53%</div>
+                    <div class="metric-title">MPPT Efficiency</div>
+                    <div class="metric-sub">WODE under partial shading</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-val gradient-text">3.67 s</div>
+                    <div class="metric-title">Convergence Speed</div>
+                    <div class="metric-sub">Fast Global MPP lock</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-val gradient-text">86,790</div>
+                    <div class="metric-title">Data Samples</div>
+                    <div class="metric-sub">Validated on 5 shading patterns</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-val gradient-text">1.37 MWp</div>
+                    <div class="metric-title">Solar Plant Audited</div>
+                    <div class="metric-sub">PT Eratex Djaja Tbk</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-val gradient-text">1 + 2</div>
+                    <div class="metric-title">Patent & Copyrights</div>
+                    <div class="metric-sub">DJKI & Kemenkumham RI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         ABOUT / PROFILE SUMMARY
+    ══════════════════════════════════════════════════ -->
+    <section id="about" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="profile-grid">
+                <div class="profile-text">
+                    <span class="section-tag">Profile Summary</span>
+                    <h2 class="section-title">Bridging Theory, Silicon & Industrial Machinery</h2>
+                    <p style="margin-top: 1rem;">
+                        I am an Industrial Electrical Engineering graduate from <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong> (GPA 3.48 / 4.00)
+                        passionate about power electronic converter topologies, embedded control algorithms, and large-scale industrial electrical maintenance.
+                    </p>
+                    <p>
+                        My work spans from designing high-frequency 2-layer PCBs (EAGLE), modeling 3D mechanical enclosures (Autodesk Fusion 360),
+                        and writing deterministic C/C++ firmware on STM32 ARM Cortex-M4 microcontrollers, to developing real-time desktop monitoring dashboards
+                        in Python (PyQt6) and executing high-voltage diagnostic procedures (Megger, BDV, LOTO) in manufacturing facilities.
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <a href="assets/Technical_Portfolio_Mustaqim_Nurul_Huda.pdf" target="_blank" class="btn-secondary">
+                            <span>📑</span> View Complete Technical Portfolio (PDF)
+                        </a>
+                        <a href="#patents" class="btn-secondary">
+                            <span>📜</span> View Patents & IP
+                        </a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-card-item">
+                        <div class="profile-card-icon">⚡</div>
+                        <div>
+                            <div class="profile-card-title">Power Electronics Expertise</div>
+                            <div class="profile-card-desc">Custom Modified Ćuk & SEPIC converters, optocoupler gate drivers (FOD3182), isolated sensing (AMC1100, ACS712).</div>
+                        </div>
+                    </div>
+                    <div class="profile-card-item">
+                        <div class="profile-card-icon">🔲</div>
+                        <div>
+                            <div class="profile-card-title">Embedded Firmware & Math</div>
+                            <div class="profile-card-desc">STM32F407VGT (168 MHz, Hardware FPU), DMA ADC sampling, TIM PWM, metaheuristics (WODE, WOA, DE, P&O).</div>
+                        </div>
+                    </div>
+                    <div class="profile-card-item">
+                        <div class="profile-card-icon">🏭</div>
+                        <div>
+                            <div class="profile-card-title">Industrial Safety & Standards</div>
+                            <div class="profile-card-desc">Strict adherence to PUIL, NFPA, NEC, K3/OHS, Lock-Out/Tag-Out (LOTO), Megger diagnostics, and transformer oil BDV.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         FEATURED PROJECT 1: MPPT HYBRID WODE
+    ══════════════════════════════════════════════════ -->
+    <section id="mppt-project">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Case Study — Final Project / Undergraduate Thesis</span>
+                <h2 class="section-title">Standalone MPPT System Based on Hybrid WODE Algorithm</h2>
+                <p class="section-subtitle">
+                    Full hardware-firmware co-design: Modified Ćuk DC-DC converter directly driving a DC submersible water pump,
+                    STM32F407 controller running hybrid Whale Optimization & Differential Evolution (WODE), and PyQt6 real-time serial dashboard.
+                </p>
+            </div>
+
+            <div class="project-card-full">
+                <div class="project-top-row">
+                    <div>
+                        <div class="project-title">WODE-MPPT Controller & Real-Time Monitoring System</div>
+                        <div style="color: var(--text-muted); font-size: .88rem; margin-top: .3rem;">
+                            Electronic Engineering Polytechnic Institute of Surabaya (PENS) · Feb 2024 – Jul 2026
+                        </div>
+                    </div>
+                    <div class="project-meta-pills">
+                        <span class="project-meta-pill" style="color: var(--accent); border-color: rgba(56,189,248,0.3);">Sole Lead Hardware & Firmware Designer</span>
+                        <span class="project-meta-pill">STM32F407VGT (C/C++)</span>
+                        <span class="project-meta-pill">Modified Ćuk Converter</span>
+                        <span class="project-meta-pill">PyQt6 & PyQtGraph</span>
+                        <span class="project-meta-pill" style="color: var(--emerald); border-color: rgba(16,185,129,0.3);">Patent Filed (DJKI 2026)</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Tabs -->
+                <div class="tab-nav">
+                    <button class="tab-btn active" onclick="switchTab(event, 'tab-overview')">Executive Summary</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'tab-hardware')">Modified Ćuk PCB & Casing</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'tab-firmware')">Hybrid WODE Algorithm</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'tab-dashboard')">PyQt6 Real-Time GUI</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'tab-results')">86,790-Sample Validation</button>
+                </div>
+
+                <!-- Tab 1: Overview -->
+                <div id="tab-overview" class="tab-pane active">
+                    <div class="showcase-grid-2col">
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">The Engineering Problem</h3>
+                            <p style="color: var(--text-sub); margin-bottom: 1rem;">
+                                Standalone solar pumping systems suffer severe power degradation and hydraulic stalling under <strong>Partial Shading Conditions (PSC)</strong>.
+                                Bypass diodes across shaded modules create multiple local power peaks (LMPP) alongside the Global Maximum Power Point (GMPP).
+                                Conventional algorithms like Perturb & Observe (P&O) inevitably get trapped in the nearest local peak, wasting up to <strong>70%</strong> of potential energy.
+                            </p>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1rem; margin-top: 1.5rem;">The Solution Delivered</h3>
+                            <p style="color: var(--text-sub);">
+                                Designed an end-to-end standalone MPPT solution utilizing a <strong>Modified Ćuk DC-DC converter</strong> topology that features continuous input and output currents
+                                (critical for reducing capacitor stress and extending PV module lifespan). Embedded a custom hybrid <strong>Whale Optimization Algorithm & Differential Evolution (WODE)</strong>
+                                on an ARM Cortex-M4 STM32 microcontroller with dynamic slew-rate limiting, and monitored performance through a custom PyQt6 dashboard.
+                            </p>
+                        </div>
+                        <div class="showcase-img-card">
+                            <img src="assets/extracted_img_p2_1.png" alt="3D Enclosure Render of MPPT Controller">
+                            <div class="showcase-img-caption">
+                                <strong>Figure 1:</strong> 3D Enclosure Render of the MPPT Controller modeled in Autodesk Fusion 360 with dual cooling fans and I2C LCD readout.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Hardware & Enclosure -->
+                <div id="tab-hardware" class="tab-pane">
+                    <div class="showcase-grid-2col">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Custom 50 kHz Modified Ćuk Converter PCB</h3>
+                            <p style="color: var(--text-sub); margin-bottom: 1rem;">
+                                Engineered a custom 2-layer PCB layout using Autodesk EAGLE optimized for low-EMI high-frequency switching (50 kHz).
+                            </p>
+                            <ul style="color: var(--text-sub); padding-left: 1.25rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                                <li><strong>Topology:</strong> Modified Ćuk DC-DC converter to directly drive a DC submersible water pump.</li>
+                                <li><strong>Gate Driving:</strong> FOD3182 high-speed optocoupler gate drivers for MOSFET switching with galvanic isolation.</li>
+                                <li><strong>Isolated Voltage Sensing:</strong> Texas Instruments AMC1100 precision isolated amplifier for high-side input voltage measurement.</li>
+                                <li><strong>Current Sensing:</strong> Allegro ACS712 Hall-effect current sensors with low-pass RC filtering.</li>
+                                <li><strong>Linear Calibration:</strong> Calibrated equations embedded directly into MCU firmware: <code>Vin = 0.096227 · ADC − 152.99 V</code>.</li>
+                            </ul>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Enclosure & Thermal Management</h3>
+                            <p style="color: var(--text-sub);">
+                                Custom metal-and-acrylic housing modeled in <strong>Autodesk Fusion 360</strong> (dimensions: 245.16 mm × 170 mm × 115.77 mm)
+                                featuring forced-air convection with dual high-CFM cooling fans, heatsink tunnel, terminal barrier blocks, and I2C LCD bracket.
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="showcase-img-card">
+                                <img src="assets/extracted_img_p1_1.png" alt="Modified Cuk Converter PCB Layout V2.0">
+                                <div class="showcase-img-caption">
+                                    <strong>Figure 2:</strong> 2-Layer Modified Ćuk Converter PCB Layout (EAGLE CAD) V2.0.
+                                </div>
+                            </div>
+                            <div class="showcase-img-card">
+                                <img src="assets/extracted_img_p2_2.png" alt="Technical Drawing of Controller Housing">
+                                <div class="showcase-img-caption">
+                                    <strong>Figure 3:</strong> 2D Production Technical Drawing of Housing (245.16 × 170 × 115.77 mm).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Firmware & Algorithm -->
+                <div id="tab-firmware" class="tab-pane">
+                    <div class="showcase-grid-2col">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">CTM-WODE Algorithm Architecture</h3>
+                            <p style="color: var(--text-sub); margin-bottom: 1rem;">
+                                The firmware executes on an <strong>STM32F407VGT</strong> ARM Cortex-M4 microcontroller running at 168 MHz with hardware floating-point unit (FPU).
+                                The hybrid algorithm combines Whale Optimization (global exploration) and Differential Evolution (local refinement):
+                            </p>
+                            <ul style="color: var(--text-sub); padding-left: 1.25rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                                <li><strong>Phase 1 — Coarse Scouting:</strong> Evaluates 4 candidate duty cycles (D = 0.55, 0.40, 0.25, 0.10) to map the multi-peak P-V landscape.</li>
+                                <li><strong>Phase 2 — Local Refine (DE):</strong> Fine-tunes candidate duty within ±4% bandwidth of the highest peak using mutation and crossover.</li>
+                                <li><strong>Dynamic Slew-Rate Limiting:</strong> Duty cycle transitions are bounded to <code>ΔD ≤ 0.025 (2.5%)</code> per control cycle, eliminating destructive current spikes.</li>
+                                <li><strong>Per-Duty Power Averaging:</strong> Replaces global filter lag with 3-sample dedicated accumulator to prevent incorrect peak ranking.</li>
+                                <li><strong>Re-tracking Trigger:</strong> Re-initializes global search if <code>P_actual &lt; 0.70 · P_best</code> (irradiance change detection).</li>
+                            </ul>
+                        </div>
+                        <div class="code-box">
+                            <div style="color: var(--text-muted); margin-bottom: .5rem; font-size: .75rem;">// Core/Src/mppt_algo.c — WODE Local Refinement Snippet</div>
+<pre><span class="comm">/* Local refinement after WODE coarse scouting */</span>
+<span class="kw">static void</span> <span class="fn">WODE_Prepare_Local_Refine</span>(<span class="kw">float</span> center_duty) {
+    <span class="kw">float</span> W = WODE_LOCAL_WIDTH; <span class="comm">// 0.04 (4%)</span>
+
+    wode_dc[<span class="num">0</span>] = center_duty;
+    wode_dc[<span class="num">1</span>] = center_duty - W;
+    wode_dc[<span class="num">2</span>] = center_duty + W;
+
+    <span class="kw">if</span> (center_duty &lt; ((WODE_DMIN + WODE_DMAX) * <span class="num">0.5f</span>)) {
+        wode_dc[<span class="num">3</span>] = center_duty + (<span class="num">2.0f</span> * W);
+    } <span class="kw">else</span> {
+        wode_dc[<span class="num">3</span>] = center_duty - (<span class="num">2.0f</span> * W);
+    }
+
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; POP_SIZE; i++) {
+        wode_dc[i] = <span class="fn">clampf_local</span>(wode_dc[i], WODE_DMIN, WODE_DMAX);
+        wode_p[i]  = <span class="num">0.0f</span>;
+    }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Dashboard -->
+                <div id="tab-dashboard" class="tab-pane">
+                    <div class="showcase-grid-2col">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">PyQt6 & PyQtGraph Real-Time GUI</h3>
+                            <p style="color: var(--text-sub); margin-bottom: 1rem;">
+                                Developed a desktop telemetry application in Python with PyQt6 and PyQtGraph to eliminate GUI freezing during high-rate serial streaming (115200 baud).
+                            </p>
+                            <ul style="color: var(--text-sub); padding-left: 1.25rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                                <li><strong>6 Synchronized Real-Time Plots:</strong> Side-by-side comparison, individual WOADE, WOA, DE, P&O power curves, and converter duty cycle.</li>
+                                <li><strong>Two-Way Serial Protocol:</strong> Transmits <code>MODE=n</code> commands to trigger algorithm switching on the STM32 on-the-fly.</li>
+                                <li><strong>Auto-Split File Logging:</strong> Generates timestamped run folders with separate log files for each mode plus a unified master telemetry log.</li>
+                                <li><strong>Live Electrical Readout:</strong> Vin, Iin, Pin, Vout, Iout, Pout, Duty, and instantaneous DC-DC efficiency (73.9% at 126.8 W).</li>
+                                <li><strong>Standalone Executable:</strong> Packaged via PyInstaller into a standalone 67 MB executable without Python dependencies.</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-img-card">
+                            <img src="screenshot_dashboard.png" alt="Real-Time MPPT Dashboard GUI">
+                            <div class="showcase-img-caption">
+                                <strong>Figure 4:</strong> Live MPPT Dashboard connected to COM4 displaying live tracking response of all 4 algorithms.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Validation Results -->
+                <div id="tab-results" class="tab-pane">
+                    <h3 style="font-size: 1.25rem; margin-bottom: .5rem;">Experimental Benchmarking Across 86,790 Data Samples</h3>
+                    <p style="color: var(--text-sub); margin-bottom: 1.5rem;">
+                        Rigorous experimental validation conducted across 5 distinct partial shading patterns, resistive loads, and continuous 20-minute DC submersible motor runs.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th>MPPT Algorithm</th>
+                                    <th>Classification</th>
+                                    <th>Avg. Tracking Efficiency</th>
+                                    <th>Convergence Speed</th>
+                                    <th>Steady-State Power Ripple</th>
+                                    <th>GMPP Success Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hybrid WODE (Proposed)</strong></td>
+                                    <td><span class="badge-pill" style="font-size:.72rem;">Hybrid Metaheuristic</span></td>
+                                    <td class="winner">98.53%</td>
+                                    <td class="winner">3.67 s</td>
+                                    <td class="winner">2.28 W</td>
+                                    <td class="winner">100.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Whale Optimization (WOA)</strong></td>
+                                    <td>Metaheuristic</td>
+                                    <td>96.12%</td>
+                                    <td>6.14 s</td>
+                                    <td>4.10 W</td>
+                                    <td>95.0%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Differential Evolution (DE)</strong></td>
+                                    <td>Evolutionary</td>
+                                    <td>95.80%</td>
+                                    <td>5.82 s</td>
+                                    <td>3.85 W</td>
+                                    <td>92.5%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Perturb & Observe (P&O)</strong></td>
+                                    <td>Conventional Benchmark</td>
+                                    <td style="color: var(--rose);">68.45%</td>
+                                    <td>1.95 s (Local)</td>
+                                    <td>7.82 W</td>
+                                    <td style="color: var(--rose);">32.0% (Trapped)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.2rem;">
+                        <p style="color: var(--text-sub); font-size: .88rem;">
+                            <strong>Research Outcome:</strong> Paper titled <em>"Design and Implementation of MPPT Based on Hybrid WODE Algorithm for Submersible Water Pump"</em>
+                            submitted to the <strong>Indonesian Journal of Science & Technology (IJOST)</strong>. Simple Patent filed with DJKI and Copyright registered with Kemenkumham RI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         FEATURED PROJECTS 2 & 3
+    ══════════════════════════════════════════════════ -->
+    <section id="other-projects" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">More Projects</span>
+                <h2 class="section-title">Applied Research & Industrial Operations</h2>
+                <p class="section-subtitle">
+                    Demonstrated leadership in national competitive research grants and high-stakes utility engineering in large-scale manufacturing.
+                </p>
+            </div>
+
+            <div class="projects-secondary-grid">
+                <!-- Project 2: EcoMow -->
+                <div class="project-card-half">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="badge-pill" style="color: var(--indigo); border-color: rgba(99,102,241,0.3);">PKM-KC National Research Grant</span>
+                            <span style="color: var(--text-muted); font-size: .8rem;">May 2024 – Nov 2024</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: .75rem;">
+                            EcoMow: Zero-Emission Battery-Powered Electric Lawn Mower
+                        </h3>
+                        <p style="color: var(--text-sub); font-size: .92rem; margin-bottom: 1.25rem;">
+                            Directed a 4-member multidisciplinary engineering team funded by the Ministry of Education, Culture, Research, and Technology (Grant No. 449/D4/DV.01.05/2024).
+                            Engineered an eco-friendly propulsion system and custom Battery Management System (BMS) to replace fossil fuel engines in institutional landscaping.
+                        </p>
+                        <ul style="color: var(--text-muted); font-size: .85rem; padding-left: 1.2rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                            <li>Designed 3D mechanical chassis, cutting deck, and casing in Autodesk Fusion 360.</li>
+                            <li>Implemented motor interlock logic and overcurrent safety cutoff routines.</li>
+                            <li>Secured official Intellectual Property Copyright: <strong>HAKI No. EC00202499819</strong>.</li>
+                        </ul>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: .75rem;">
+                        <div class="showcase-img-card">
+                            <img src="assets/extracted_img_p3_1.jpeg" alt="PKM-KC Grant Certificate">
+                            <div class="showcase-img-caption" style="font-size: .72rem; padding: .5rem;">PKM-KC Grant Award</div>
+                        </div>
+                        <div class="showcase-img-card">
+                            <img src="assets/extracted_img_p3_2.jpeg" alt="HAKI Copyright Certificate">
+                            <div class="showcase-img-caption" style="font-size: .72rem; padding: .5rem;">HAKI EC00202499819</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: 1.37 MWp Solar Plant & Utility -->
+                <div class="project-card-half">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="badge-pill success">PT Eratex Djaja Tbk · Probolinggo</span>
+                            <span style="color: var(--text-muted); font-size: .8rem;">Mar 2025 – Jun 2025</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: .75rem;">
+                            1.37 MWp Solar Plant Diagnostics & Industrial Utility Maintenance
+                        </h3>
+                        <p style="color: var(--text-sub); font-size: .92rem; margin-bottom: 1.25rem;">
+                            Electrical Engineering Intern executing hands-on maintenance and telemetry analysis on a 1.37 MWp On-Grid Solar Power Plant (PLTS)
+                            covering 13.6% of textile manufacturing energy demand with specific yield 3.543 kWh/kWp/day.
+                        </p>
+                        <ul style="color: var(--text-muted); font-size: .85rem; padding-left: 1.2rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                            <li>Audited power factor stability (cos φ = 0.967) and yield via Solar-Log telemetry software.</li>
+                            <li>Executed transformer oil purification (vacuum dehydration) & Dielectric Breakdown Voltage (BDV) tests.</li>
+                            <li>Performed Megger insulation resistance diagnostics, 3-phase induction motor overhauls, and PV I-V curve tracing under strict LOTO & K3/OHS.</li>
+                        </ul>
+                    </div>
+                    <div class="showcase-img-card">
+                        <img src="assets/extracted_img_p4_1.png" alt="PT Eratex Djaja Tbk Internship Certificate">
+                        <div class="showcase-img-caption" style="font-size: .72rem; padding: .5rem;">
+                            Official Internship Certificate — PT Eratex Djaja Tbk
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         EXPERIENCE & LEADERSHIP TIMELINE
+    ══════════════════════════════════════════════════ -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Work & Organizational Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2025 – Jun 2025</div>
+                    <div class="timeline-role">Electrical Engineering Intern</div>
+                    <div class="timeline-company">PT Eratex Djaja Tbk · Probolinggo, Indonesia</div>
+                    <div class="timeline-desc">
+                        Supervised operational performance of 1.37 MWp rooftop solar power plant; conducted preventive maintenance on Sungrow SG110CX inverters,
+                        Canadian Solar arrays, transformer oil vacuum dehydration purification, BDV breakdown testing, Megger cable insulation diagnostics,
+                        and 3-phase power distribution panel assembly adhering strictly to Lock-Out/Tag-Out (LOTO).
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2024 – Nov 2024</div>
+                    <div class="timeline-role">Project Lead — PKM-KC Research Grantee</div>
+                    <div class="timeline-company">Ministry of Education, Culture, Research, and Technology (Kemendikbudristek)</div>
+                    <div class="timeline-desc">
+                        Led a 4-member multidisciplinary engineering team in designing and manufacturing ”EcoMow,” an eco-friendly zero-emission electric lawn mower.
+                        Managed budget, CAD mechanical design, BMS battery management, and converted technical blueprints into registered Copyright HAKI No. EC00202499819.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Aug 2022 – Jul 2026</div>
+                    <div class="timeline-role">Active Member</div>
+                    <div class="timeline-company">HIMA ELIN (Industrial Electrical Engineering Student Association) · PENS</div>
+                    <div class="timeline-desc">
+                        Participated actively in departmental technical workshops, academic seminars, industrial automation mentoring, and soft-skills training.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Aug 2023 – Jul 2025</div>
+                    <div class="timeline-role">Active Member</div>
+                    <div class="timeline-company">UKM Dirgantara PENS (Aeronautics & Aerospace Student Club)</div>
+                    <div class="timeline-desc">
+                        Engaged in aeromodelling design, avionics telemetry, and team-building engineering competitions across polytechnic departments.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         TECHNICAL SKILL MATRIX
+    ══════════════════════════════════════════════════ -->
+    <section id="skills" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Competencies</span>
+                <h2 class="section-title">Technical Skill Matrix</h2>
+                <p class="section-subtitle">
+                    Cross-disciplinary proficiency spanning power electronic hardware, embedded firmware, industrial automation, and CAD design.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Group 1 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(56,189,248,0.1); color: var(--accent);">⚡</div>
+                        <div class="skill-group-title">Power Electronics & HW</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">Modified Ćuk Converter</span>
+                        <span class="skill-pill">SEPIC Converters</span>
+                        <span class="skill-pill">2-Layer PCB (EAGLE)</span>
+                        <span class="skill-pill">AMC1100 Isolated Amp</span>
+                        <span class="skill-pill">ACS712 Current Sensors</span>
+                        <span class="skill-pill">FOD3182 Gate Drivers</span>
+                        <span class="skill-pill">Transformer Oil BDV</span>
+                        <span class="skill-pill">Megger Insulation Test</span>
+                        <span class="skill-pill">3-Phase Motor Overhaul</span>
+                    </div>
+                </div>
+
+                <!-- Group 2 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(16,185,129,0.1); color: var(--emerald);">🔲</div>
+                        <div class="skill-group-title">Embedded Systems & Firmware</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">STM32 (CubeIDE / C++)</span>
+                        <span class="skill-pill">ARM Cortex-M4 FPU</span>
+                        <span class="skill-pill">DMA ADC Sampling</span>
+                        <span class="skill-pill">TIM PWM Generation</span>
+                        <span class="skill-pill">UART / USART Serial</span>
+                        <span class="skill-pill">I2C LCD Drivers</span>
+                        <span class="skill-pill">Hybrid WODE Algorithm</span>
+                        <span class="skill-pill">Whale Optimization (WOA)</span>
+                        <span class="skill-pill">Differential Evolution (DE)</span>
+                        <span class="skill-pill">Perturb & Observe (P&O)</span>
+                    </div>
+                </div>
+
+                <!-- Group 3 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(99,102,241,0.1); color: var(--indigo);">💻</div>
+                        <div class="skill-group-title">Software & Data Analytics</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">Python (PyQt6 GUI)</span>
+                        <span class="skill-pill">PyQtGraph Real-Time</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">Matplotlib</span>
+                        <span class="skill-pill">MATLAB / Simulink</span>
+                        <span class="skill-pill">SQL (PostgreSQL)</span>
+                        <span class="skill-pill">Power BI</span>
+                        <span class="skill-pill">Node-RED</span>
+                        <span class="skill-pill">Git & GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Group 4 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(245,158,11,0.1); color: var(--amber);">🏭</div>
+                        <div class="skill-group-title">Industrial Automation & Grid</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">Siemens TIA Portal</span>
+                        <span class="skill-pill">Omron CX-Programmer</span>
+                        <span class="skill-pill">SCADA Systems</span>
+                        <span class="skill-pill">ETAP Power Analysis</span>
+                        <span class="skill-pill">Solar-Log Telemetry</span>
+                        <span class="skill-pill">Switchgear Assembly</span>
+                        <span class="skill-pill">3-Phase MCCB / Contactors</span>
+                        <span class="skill-pill">Power Factor Correction</span>
+                    </div>
+                </div>
+
+                <!-- Group 5 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(192,132,252,0.1); color: #c084fc);">📐</div>
+                        <div class="skill-group-title">CAD & Mechanical Design</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">Autodesk Fusion 360</span>
+                        <span class="skill-pill">AutoCAD Electrical</span>
+                        <span class="skill-pill">Autodesk Revit</span>
+                        <span class="skill-pill">Autodesk Inventor</span>
+                        <span class="skill-pill">EAGLE PCB Layout</span>
+                        <span class="skill-pill">3D Casing & Thermal Enclosures</span>
+                        <span class="skill-pill">2D Production Drawings</span>
+                    </div>
+                </div>
+
+                <!-- Group 6 -->
+                <div class="skill-group-card">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon" style="background: rgba(244,63,94,0.1); color: var(--rose);">🛡️</div>
+                        <div class="skill-group-title">Standards & Safety</div>
+                    </div>
+                    <div class="skill-pill-cloud">
+                        <span class="skill-pill">PUIL (Indonesian Electrical Reg)</span>
+                        <span class="skill-pill">National Electric Code (NEC)</span>
+                        <span class="skill-pill">NFPA Standards</span>
+                        <span class="skill-pill">K3 / OHS Compliance</span>
+                        <span class="skill-pill">Lock-Out / Tag-Out (LOTO)</span>
+                        <span class="skill-pill">English PEPT 527 (TOEFL ITP Eq.)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PATENTS, PUBLICATIONS & INTELLECTUAL PROPERTY
+    ══════════════════════════════════════════════════ -->
+    <section id="patents">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Intellectual Property</span>
+                <h2 class="section-title">Patents, Copyrights & Publications</h2>
+                <p class="section-subtitle">
+                    Legal protection and scientific dissemination of proprietary designs and software systems.
+                </p>
+            </div>
+
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div>
+                        <span class="cred-badge" style="background: rgba(56,189,248,0.15); color: var(--accent);">Simple Patent (Paten Sederhana)</span>
+                        <div class="cred-title">Solar Panel MPPT System Based on WODE Algorithm for Submersible Water Pump Control</div>
+                        <div class="cred-org">Directorate General of Intellectual Property (DJKI) · PENS · 2026</div>
+                        <div class="cred-desc">
+                            Patented invention of a standalone MPPT controller utilizing a modified Ćuk DC-DC topology and hybrid WODE algorithm to eliminate pump stalling under partial shading.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credential-card">
+                    <div>
+                        <span class="cred-badge" style="background: rgba(16,185,129,0.15); color: var(--emerald);">Copyright (HAKI Kemenkumham RI)</span>
+                        <div class="cred-title">EcoMow Technical Manual & Mechanical Design</div>
+                        <div class="cred-org">Ministry of Law and Human Rights Indonesia · No. EC00202499819</div>
+                        <div class="cred-desc">
+                            Registered technical manual, electrical schematic blueprints, and 3D structural CAD drawings for the zero-emission battery lawn mower developed under the PKM-KC national grant.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credential-card">
+                    <div>
+                        <span class="cred-badge" style="background: rgba(16,185,129,0.15); color: var(--emerald);">Copyright (HAKI Kemenkumham RI)</span>
+                        <div class="cred-title">Real-Time MPPT Python PyQt6 Dashboard Monitoring Software</div>
+                        <div class="cred-org">Directorate General of Intellectual Property · 2024–2026</div>
+                        <div class="cred-desc">
+                            Registered computer software copyright for the real-time two-way serial control and auto-split data logging MPPT desktop application.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credential-card">
+                    <div>
+                        <span class="cred-badge" style="background: rgba(99,102,241,0.15); color: var(--indigo);">Scientific Journal Paper</span>
+                        <div class="cred-title">Indonesian Journal of Science & Technology (IJOST)</div>
+                        <div class="cred-org">Manuscript Submitted · Peer Review</div>
+                        <div class="cred-desc">
+                            Authored research paper documenting the mathematical formulation, simulation, and experimental validation across 86,790 samples of the hybrid WODE algorithm.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CALL TO ACTION / DOWNLOAD BANNER
+    ══════════════════════════════════════════════════ -->
+    <section>
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Let's Engineer High-Impact Solutions Together</h2>
+                <p>
+                    Open for roles in <strong>Automation Engineering</strong>, <strong>Power Electronics & Embedded Systems</strong>,
+                    and <strong>Continuous Improvement / Electrical Utility Maintenance</strong>.
+                </p>
+                <div class="cta-buttons">
+                    <a href="assets/Resume_Mustaqim_Nurul_Huda.pdf" target="_blank" class="btn-primary">
+                        <span>📄</span> Download Resume (PDF)
+                    </a>
+                    <a href="assets/Technical_Portfolio_Mustaqim_Nurul_Huda.pdf" target="_blank" class="btn-secondary">
+                        <span>📑</span> Download Technical Portfolio (PDF)
+                    </a>
+                    <a href="https://wa.me/6285172263476" target="_blank" class="btn-secondary">
+                        <span>💬</span> Chat via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 <strong>Mustaqim Nurul Huda, S.Tr.T.</strong> · Built with pride at
+                <a href="https://www.pens.ac.id" target="_blank">Politeknik Elektronika Negeri Surabaya (PENS)</a>
+            </p>
+            <p style="margin-top: .5rem; font-size: .8rem;">
+                Surabaya, East Java, Indonesia · <a href="https://github.com/Prospexxx">github.com/Prospexxx</a> · <a href="https://linkedin.com/in/huda14">linkedin.com/in/huda14</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════
+         INTERACTIVE SCRIPTS
+    ══════════════════════════════════════════════════ -->
+    <script>
+        function switchTab(evt, tabId) {
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Pola,Source,Condition,Irradiance,GMPP_Target_W,Algorithm,t_track_s,p_avg_W,Eff_pct,Ripple_W
+Pola 1,Pola 1 (Run 1 part 2),Uniform High,880 W/m²,122.3,WODE,1.093,122.76,100.38,1.85
+Pola 1,Pola 1 (Run 1 part 2),Uniform High,880 W/m²,122.3,PNO,0.453,122.56,100.21,2.35
+Pola 1,Pola 1 (Run 1 part 2),Uniform High,880 W/m²,122.3,WOA,2.007,122.05,99.8,2.31
+Pola 1,Pola 1 (Run 1 part 2),Uniform High,880 W/m²,122.3,DE,0.0,123.02,100.59,1.55
+Pola 2,Pola 2 (Run 2 20m - 92.18 W),Medium Irradiance,660 W/m²,92.18,WODE,2.469,91.45,99.21,1.97
+Pola 2,Pola 2 (Run 2 20m - 92.18 W),Medium Irradiance,660 W/m²,92.18,PNO,0.928,90.41,98.08,3.66
+Pola 2,Pola 2 (Run 2 20m - 92.18 W),Medium Irradiance,660 W/m²,92.18,WOA,2.364,89.61,97.21,3.46
+Pola 2,Pola 2 (Run 2 20m - 92.18 W),Medium Irradiance,660 W/m²,92.18,DE,2.621,90.5,98.18,1.43
+Pola 3,Pola 3 (Run 4 part 2),Uniform Peak,910 W/m²,126.13,WODE,0.988,126.63,100.4,2.04
+Pola 3,Pola 3 (Run 4 part 2),Uniform Peak,910 W/m²,126.13,PNO,0.763,125.65,99.62,3.57
+Pola 3,Pola 3 (Run 4 part 2),Uniform Peak,910 W/m²,126.13,WOA,2.261,125.74,99.69,2.69
+Pola 3,Pola 3 (Run 4 part 2),Uniform Peak,910 W/m²,126.13,DE,0.0,126.96,100.66,1.63
+Pola 4,Pola 4 (Run 3 ujimotor),Partial Shading,460 W/m² (PSC),64.28,WODE,4.772,62.95,97.92,1.48
+Pola 4,Pola 4 (Run 3 ujimotor),Partial Shading,460 W/m² (PSC),64.28,PNO,4.389,47.86,74.46,17.06
+Pola 4,Pola 4 (Run 3 ujimotor),Partial Shading,460 W/m² (PSC),64.28,WOA,6.376,59.59,92.7,15.27
+Pola 4,Pola 4 (Run 3 ujimotor),Partial Shading,460 W/m² (PSC),64.28,DE,4.39,59.97,93.3,1.33
+Pola 5,Pola 5 (Run 0 ujimotor),Full Irradiance (STC),1000 W/m² (STC),138.49,WODE,2.429,137.88,99.56,1.62
+Pola 5,Pola 5 (Run 0 ujimotor),Full Irradiance (STC),1000 W/m² (STC),138.49,PNO,1.199,135.61,97.92,2.19
+Pola 5,Pola 5 (Run 0 ujimotor),Full Irradiance (STC),1000 W/m² (STC),138.49,WOA,6.784,137.06,98.97,2.33
+Pola 5,Pola 5 (Run 0 ujimotor),Full Irradiance (STC),1000 W/m² (STC),138.49,DE,4.005,136.74,98.74,1.52

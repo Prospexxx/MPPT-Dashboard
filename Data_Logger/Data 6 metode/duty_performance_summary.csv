@@ -1,0 +1,3 @@
+Algorithm,Target_GMPP_Power_W,Steady_State_Power_W,Steady_Duty_Cycle_Pct,Duty_Cycle_Ratio_D,Duty_Ripple_P-P_Pct,Tracking_Time_95pct_s,Tracking_Efficiency_Pct
+M1: Standard INC,142.53,134.42,31.2,0.312,3.5,27.28,94.31
+M2: INC-Fuzzy,142.53,141.3,31.07,0.3107,0.4,16.51,99.14
