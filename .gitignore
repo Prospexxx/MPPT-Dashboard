@@ -49,3 +49,6 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
+
+# portfolio build intermediates
+portfolio-build/
