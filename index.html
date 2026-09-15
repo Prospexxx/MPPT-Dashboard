@@ -784,7 +784,6 @@ footer { border-top:1px solid var(--line); padding:2.2rem 0 2.6rem; background:v
           <option value="1">Vin (V)</option>
           <option value="4">Vout (V)</option>
           <option value="7">Duty (%)</option>
-          <option value="9">Irradiance (W/m²)</option>
         </select>
       </div>
       <div class="panel-bd">
@@ -1495,7 +1494,7 @@ scrub.addEventListener('input',e=>{
   syncUI();
 });
 function updateReadout(){
-  const el=$('#teleReadout'); const m=parseInt($('#teleMetric').value,7)||6;
+  const el=$('#teleReadout'); const m=parseInt($('#teleMetric').value,10)||6;
   const rows=['Pout','Pin','Vin','Vout','Duty','Ppeak'];
   el.innerHTML='';
   /* find latest sample at/before teleT for each visible algo */
