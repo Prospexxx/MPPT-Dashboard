@@ -74,6 +74,12 @@ else:
             if not v or len(v[0]) != 8: problems.append(f'tele[{k}] bad shape')
         for k, v in d.get('pv', {}).items():
             if not v or len(v[0]) != 7: problems.append(f'pv[{k}] bad shape')
+        mo = d.get('motor', {})
+        if not mo: problems.append('EXP missing motor overlay dataset')
+        for k, v in mo.items():
+            if not v or len(v[0]) != 2: problems.append(f'motor[{k}] bad shape')
+        if not isinstance(d.get('motorTarget'), (int, float)):
+            problems.append('EXP missing motorTarget')
         n = sum(len(v) for v in d.get('tele', {}).values()) + sum(len(v) for v in d.get('pv', {}).values())
         print(f'DATA OK: tele={ {k: len(v) for k, v in d["tele"].items()} } pv={ {k: len(v) for k, v in d["pv"].items()} } total={n} samples')
     except Exception as e:
