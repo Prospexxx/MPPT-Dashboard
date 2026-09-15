@@ -68,20 +68,26 @@ if not m:
 else:
     try:
         d = json.loads(m.group(1))
-        for k in ('tele', 'pv'):
+        for k in ('motor', 'pv', 'stats', 'motorTarget'):
             if k not in d: problems.append(f'EXP missing key {k}')
-        for k, v in d.get('tele', {}).items():
-            if not v or len(v[0]) != 8: problems.append(f'tele[{k}] bad shape')
         for k, v in d.get('pv', {}).items():
-            if not v or len(v[0]) != 7: problems.append(f'pv[{k}] bad shape')
+            if not v or len(v[0]) != 2: problems.append(f'pv[{k}] bad shape')
         mo = d.get('motor', {})
         if not mo: problems.append('EXP missing motor overlay dataset')
         for k, v in mo.items():
             if not v or len(v[0]) != 2: problems.append(f'motor[{k}] bad shape')
         if not isinstance(d.get('motorTarget'), (int, float)):
             problems.append('EXP missing motorTarget')
-        n = sum(len(v) for v in d.get('tele', {}).values()) + sum(len(v) for v in d.get('pv', {}).values())
-        print(f'DATA OK: tele={ {k: len(v) for k, v in d["tele"].items()} } pv={ {k: len(v) for k, v in d["pv"].items()} } total={n} samples')
+        pvx = d.get('pv', {})
+        if not pvx: problems.append('EXP missing pv patterns')
+        for k, v in pvx.items():
+            if not v or len(v[0]) != 2: problems.append(f'pv[{k}] bad shape (must be [Vin, Pin])')
+        st = d.get('stats', {})
+        if not st: problems.append('EXP missing benchmark stats')
+        for k, v in st.items():
+            if 'eff' not in v: problems.append(f'stats[{k}] missing eff')
+        n = sum(len(v) for v in mo.values()) + sum(len(v) for v in pvx.values())
+        print(f'DATA OK: motor={ {k: len(v) for k, v in mo.items()} } pv={ {k: len(v) for k, v in pvx.items()} } total={n} samples')
     except Exception as e:
         problems.append(f'EXP JSON invalid: {e}')
 
