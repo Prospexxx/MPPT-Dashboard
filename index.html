@@ -315,7 +315,8 @@ select.sel:focus { border-color:var(--gold); }
 .ro span { font-size:.6rem; color:var(--text-mute); text-transform:uppercase; letter-spacing:.07em; }
 
 /* ═══ PROJECT CARDS ═══ */
-.proj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.4rem; }
+.proj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.4rem;
+  align-items:start; }
 .proj { background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden;
   display:flex; flex-direction:column; transition:.3s var(--ease); box-shadow:var(--shadow-md); }
 .proj:hover { transform:translateY(-6px); border-color:rgba(251,191,36,.45); box-shadow:var(--shadow-lg); }
