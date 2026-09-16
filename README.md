@@ -134,4 +134,4 @@ python dashboard_ta.py
 - 🎓 Politeknik Elektronika Negeri Surabaya (PENS)  
 - 📧 [mustaqimnurulhuda14@gmail.com](mailto:mustaqimnurulhuda14@gmail.com)  
 - 💬 [WhatsApp (+62 851-7226-3476)](https://wa.me/6285172263476)  
-- 🔗 [LinkedIn](https://linkedin.com/in/huda14) · [GitHub](https://github.com/Prospexxx) · [Linktree](https://linktr.ee/akunhudayangasli)
+- 🔗 [LinkedIn](https://linkedin.com/in/huda14) · [GitHub](https://github.com/Prospexxx) · [Linktree](https://linktr.ee/huda1408)
