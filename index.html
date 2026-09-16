@@ -108,15 +108,14 @@ header.scrolled { border-bottom-color:var(--line); box-shadow:0 8px 30px -18px r
 .nav-in { max-width:1280px; margin:0 auto; height:var(--nav-h); padding:0 clamp(16px,3.5vw,40px);
   display:flex; align-items:center; gap:1.25rem; }
 .brand { display:flex; align-items:center; gap:.7rem; flex-shrink:0; }
-.brand .mark { width:38px; height:38px; border-radius:11px; background:var(--grad-1); display:grid; place-items:center;
-  color:#1a1005; font-weight:900; font-size:.95rem; box-shadow:0 6px 18px -6px rgba(251,146,60,.7); position:relative; overflow:hidden; }
-.brand .mark::after { content:""; position:absolute; inset:0; background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
-  transform:translateX(-120%); animation:shine 4.5s var(--ease) infinite; }
-@keyframes shine { 0%,60%{transform:translateX(-130%)} 100%{transform:translateX(130%)} }
+.brand .avatar { width:38px; height:38px; border-radius:11px; object-fit:cover; display:block;
+  border:1.5px solid color-mix(in srgb,var(--gold) 70%,transparent);
+  box-shadow:0 2px 8px -3px rgba(0,0,0,.6); }
 .brand .who { display:flex; flex-direction:column; line-height:1.25; }
 .brand .who strong { font-size:.95rem; letter-spacing:-.01em; }
 .brand .who span { font-size:.68rem; color:var(--text-mute); letter-spacing:.06em; text-transform:uppercase; }
-.nav-links { display:flex; gap:.15rem; margin-left:auto; align-items:center; }
+.nav-links { display:flex; gap:.15rem; margin-left:auto; align-items:center;
+  list-style:none; padding:0; margin-top:0; margin-bottom:0; }
 .nav-links a { padding:.5rem .8rem; border-radius:9px; font-size:.86rem; color:var(--text-sub); font-weight:500;
   position:relative; transition:color .2s, background .2s; white-space:nowrap; }
 .nav-links a:hover { color:var(--text); background:var(--card-hi); }
@@ -163,12 +162,6 @@ section { position:relative; padding:clamp(64px,8vw,110px) 0; }
 /* ═══ HERO ═══ */
 .hero { min-height:100vh; display:flex; align-items:center; padding-top:calc(var(--nav-h) + 30px); padding-bottom:50px; }
 .hero-in { display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(24px,4vw,56px); align-items:center; width:100%; }
-.profile-shot { width:clamp(150px,15vw,200px); flex-shrink:0; margin:0 auto 1.5rem; position:relative; }
-.profile-shot img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r-lg);
-  border:2px solid var(--gold); box-shadow:0 18px 40px -14px rgba(0,0,0,.8); display:block; }
-.profile-shot::after { content:""; position:absolute; inset:-6px; border-radius:calc(var(--r-lg) + 6px);
-  background:var(--grad-1); z-index:-1; opacity:.35; filter:blur(14px); }
-.profile-card-inner { display:flex; flex-direction:column; }
 .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; }
 .chip { font-size:.75rem; font-weight:600; padding:.35rem .8rem; border-radius:999px; border:1px solid var(--line);
   background:var(--card); color:var(--text-sub); display:inline-flex; align-items:center; gap:.4rem; }
@@ -445,7 +438,8 @@ footer { border-top:1px solid var(--line); padding:2.2rem 0 2.6rem; background:v
 <header id="hdr">
   <div class="nav-in">
     <a href="#home" class="brand">
-      <div class="mark">MH</div>
+      <img src="assets/pasfoto.webp" alt="Mustaqim Nurul Huda" class="avatar"
+           onerror="this.onerror=null;this.src='assets/pasfoto.jpg'">
       <div class="who"><strong>Mustaqim N. Huda</strong><span>S.Tr.T · Electrical Eng.</span></div>
     </a>
     <ul class="nav-links" id="navlinks">
@@ -506,20 +500,15 @@ footer { border-top:1px solid var(--line); padding:2.2rem 0 2.6rem; background:v
     </div>
 
     <div class="hero-card">
-      <div class="profile-card-inner">
-        <div class="profile-shot">
-          <img src="assets/pasfoto.webp" alt="Mustaqim Nurul Huda" loading="eager" decoding="async" onerror="this.onerror=null;this.src='assets/pasfoto.jpg'">
-        </div>
-        <div class="hero-card-top">
-          <span class="live-dot"><i></i> Live telemetry replay</span>
-          <span style="font-size:.7rem;color:var(--text-mute);font-family:var(--mono)">6-algo overlay · ujimotor run 0</span>
-        </div>
+      <div class="hero-card-top">
+        <span class="live-dot"><i></i> Live telemetry replay</span>
+        <span style="font-size:.7rem;color:var(--text-mute);font-family:var(--mono)">6-algo overlay · ujimotor run 0</span>
+      </div>
       <div class="chart-wrap"><canvas id="heroChart" class="chart" style="height:200px"></canvas></div>
       <div class="kpis">
         <div class="kpi"><b class="grad-text" id="hk1">99.52%</b><span>MPPT efficiency</span></div>
         <div class="kpi"><b class="grad-text-2" id="hk2">2.43s</b><span>Convergence</span></div>
         <div class="kpi"><b id="hk3">25s</b><span>Live window</span></div>
-      </div>
       </div>
     </div>
   </div>
